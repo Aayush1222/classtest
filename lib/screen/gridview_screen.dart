@@ -35,14 +35,14 @@ class _GridViewScreenState extends State<GridViewScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('GridView Screen'),
+        title: Text('Welcome'),
       ),
       body: GridView.count(
         padding: const EdgeInsets.all(20),
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
         crossAxisCount: 3,
-        childAspectRatio: 1, // Set aspect ratio to 1 for square buttons
+        childAspectRatio: 1,
         children: List.generate(name.length, (index) {
           return Visibility(
             visible: buttonVisibility[index],
@@ -60,7 +60,8 @@ class _GridViewScreenState extends State<GridViewScreen> {
                 alignment: Alignment.center,
                 child: Text(
                   nameLetters[index],
-                  style: TextStyle(fontSize: 36, color: Colors.white), // Increase font size
+                  style: TextStyle(
+                      fontSize: 36, color: Colors.white), // Increase font size
                 ),
               ),
             ),
