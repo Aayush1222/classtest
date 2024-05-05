@@ -41,8 +41,8 @@ class _GridViewScreenState extends State<GridViewScreen> {
         padding: const EdgeInsets.all(20),
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
-        crossAxisCount: 3, // Set the cross axis count to 3
-        childAspectRatio: 2,
+        crossAxisCount: 3,
+        childAspectRatio: 1, // Set aspect ratio to 1 for square buttons
         children: List.generate(name.length, (index) {
           return Visibility(
             visible: buttonVisibility[index],
@@ -55,12 +55,12 @@ class _GridViewScreenState extends State<GridViewScreen> {
                   color: buttonColors[index],
                   shape: BoxShape.circle,
                 ),
-                width: 50,
-                height: 50,
+                width: 100, // Set width and height for larger buttons
+                height: 100,
                 alignment: Alignment.center,
                 child: Text(
                   nameLetters[index],
-                  style: TextStyle(fontSize: 24, color: Colors.white),
+                  style: TextStyle(fontSize: 36, color: Colors.white), // Increase font size
                 ),
               ),
             ),
